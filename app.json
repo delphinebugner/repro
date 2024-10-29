@@ -14,13 +14,17 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.delphinebugner.repro"
+      "bundleIdentifier": "com.delphinebugner.repro",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.delphinebugner.repro"
     },
     "web": {
       "bundler": "metro",
@@ -28,7 +32,18 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "newArchEnabled": true
+          },
+          "android": {
+            "newArchEnabled": true
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
@@ -38,6 +53,12 @@
         "projectId": "9df45f9b-2657-43d1-9eeb-ca6e6b83ceaf"
       }
     },
-    "owner": "delphinebugner"
+    "owner": "delphinebugner",
+    "updates": {
+      "url": "https://u.expo.dev/9df45f9b-2657-43d1-9eeb-ca6e6b83ceaf"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
   }
 }
