@@ -8,16 +8,16 @@ import { ThemedText } from "./ThemedText";
 
 export const AnimatedButton = () => {
   const shiftAmount = useSharedValue(-100);
-  const logoShiftUpStyle = useAnimatedStyle(() => ({
+  const shiftDownStyle = useAnimatedStyle(() => ({
     transform: [{ translateY: shiftAmount.value }],
   }));
 
-  if (shiftAmount.value !== -0) {
+  if (shiftAmount.value !== 0) {
     shiftAmount.value = withTiming(0, { duration: 450 });
   }
 
   return (
-    <Animated.View style={[logoShiftUpStyle, { padding: 8, gap: 16 }]}>
+    <Animated.View style={[shiftDownStyle, { padding: 8, gap: 16 }]}>
       <Pressable
         onPress={() => Alert.alert("Im clicked")}
         style={{
