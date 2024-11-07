@@ -4,47 +4,20 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## Get started
 
-1. Install dependencies
+Run prebuild & build for the wanted platform.
 
-   ```bash
-   npm install
-   ```
+## Usage
 
-2. Start the app
+This is a repro app for issue https://github.com/software-mansion/react-native-reanimated/issues/6676. 
 
-   ```bash
-    npx expo start
-   ```
+To reproduce it here:
 
-In the output, you'll find options to open the app in a
+   1. Run the repro on a real device (error does not occur on emulator)
+   2. Just after mounting the Home, try to clic on a "Press me" button : nothing happens 🚨
+   3. Click on "Explore" Tab
+   4. Return to "Home" Tab
+   5. Click on a "Press me" button: an alert shows up ✅
+   6. Click on the "Toggle animated buttons" to unmount-remount them
+   7. Click again a "Press me" button: nothing happens 🚨
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
